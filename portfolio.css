@@ -10,6 +10,22 @@
   float: right;
   font-size: 35px;
 }
+.active:hover {
+  background-color:rgb(179, 27, 27);
+  color:black;
+}
+.active2:hover {
+  background-color:rgb(179, 27, 27);
+  color:black;
+}
+.active3:hover {
+  background-color:rgb(179, 27, 27);
+  color:black;
+}
+.active4:hover {
+  background-color:rgb(179, 27, 27);
+  color:black;
+}
 * {
   box-sizing: border-box;
 }

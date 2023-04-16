@@ -72,21 +72,7 @@ h2 {
   margin-inline-end: 0px;
   font-weight: 300px;
 }
-.stonk {
-  overflow-clip-margin: content-box;
-  overflow: clip;
-  width: 300px;
-  float: right;
-}
-.quote {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, cursive;
-  font-weight: 100;
-  color: white;
-  text-shadow: 1px 1px 2px black;
-  font-size: 3em;
-  text-align: center;
-  margin-top: 2em;
-}
+
   footer {
     box-sizing: border-box;
     position: fixed;
@@ -128,32 +114,88 @@ section > img {
   font-size: small;
   float:left;
 }
-section:nth-of-type(even) > img {
-  float: right;
-  margin: 0 0 24px 24px;
-}
-.fp-project {
-  font-family: 'Raleway', sans-serif;
-    font-size: 1em;
-    width: calc(100% - 6em);
-    background: #ffebcc;
-    background: #fafafa;
-    color: #222;
-    box-shadow: 0 3px 6px -2px #ccc;
-    margin: 2em auto;
-    padding: 1em;
-}
 .h1-des {
   font-family: 'Raleway', sans-serif;
   font-weight: 100;
   font-size: 2rem;
   border-bottom: 1px solid #ccc;
 }
-.grocery-title {
-  font-weight: 900;
-  font-size: 2em;
-  margin: 0 0 1em;
-  border-bottom: 1px solid #ccc;
+.container {
+ width: 80%;
+  margin: 50px auto;
 }
-
-
+.contact-box {
+  background: #fff;
+  display: flex;
+  color:black;
+}
+.contact-left {
+  flex-basis: 60%;
+  padding: 40px 60px;
+}
+.contact-right {
+  flex-basis: 40%;
+  padding: 40px;
+  background:rgb(179, 27, 27);
+  color: #fff;
+}
+.h1-class {
+margin-bottom: 10px;
+}
+.container p {
+  margin-bottom: 40px;
+}
+.input-row {
+  justify-content: space-between;
+}
+.input-row .input-group {
+  flex-basis: 45%;
+}
+input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+  padding-bottom: 5px;
+}
+textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  outline: none;
+  padding: 10px;
+  box-sizing: border-box;
+}
+label {
+  margin-bottom: 6px;
+  display:block;
+  color: rgb(179, 27, 27);
+}
+.prompt {
+  color:rgb(179, 27, 27);
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+h3 {
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+button {
+  background: rgb(179, 27, 27);
+  width: 100px;
+  border: none;
+  outline: none;
+  color:#fff;
+  height: 35px;
+  border-radius: 30px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.15s, 
+  color 0.15s;
+  box-shadow: 0px 5px 15px 0px rbga(28,0,181,0.3);
+}
+tr td:first-child {
+  padding-right: 20px;
+}
+tr td {
+  padding-top: 20px;
+}
