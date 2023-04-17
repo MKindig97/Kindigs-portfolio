@@ -199,3 +199,10 @@ tr td:first-child {
 tr td {
   padding-top: 20px;
 }
+
+
+.Submit {
+  width: 90px;
+  height: 30px;
+
+}

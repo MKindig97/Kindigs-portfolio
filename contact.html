@@ -27,18 +27,31 @@
         <div class="contact-box">
           <div class="contact-left">
             <h3 class="prompt">Send your request</h3>
-            <form>
+            <form id="form" onsubmit="myFunction()">
               <div class="input-row">
                 <div class="input-group">
-                  <label>Name</label>
-                  <input type="text" placeholder="John Smith" />
+                  <label for="fname">First Name</label>
+                  <input
+                    type="text"
+                    id="fname"
+                    name="fname"
+                    required
+                    placeholder="John"
+                  />
+                  <label for="lname">Last name</label>
+                  <input
+                    type="text"
+                    id="lname"
+                    name="lname"
+                    placeholder="Smith"
+                  />
                 </div>
                 <div class="input-group">
                   <label>Phone</label>
                   <input type="text" placeholder="+1 555 555 5555" />
                 </div>
                 <div class="input-group">
-                  <label>Email</label>
+                  <label for="Email">Email</label>
                   <input type="text" placeholder="johnsmith@gmail.com" />
                 </div>
                 <div class="input-group">
@@ -50,7 +63,12 @@
               <label>Message</label>
               <textarea rows="5" placeholder="Your Message"></textarea>
 
-              <button type="submit">SEND</button>
+              <input
+                onclick="Submit()"
+                class="Submit"
+                type="submit"
+                id="submit"
+              />
             </form>
           </div>
           <div class="contact-right">
@@ -82,4 +100,36 @@
       <p class="watermark">Kindig Enterprises© 2023</p>
     </footer>
   </body>
+  <script>
+    function Submit() {
+      alert(
+        "Thanks " +
+          document.getElementById("fname").value +
+          " " +
+          document.getElementById("lname").value +
+          "!"
+      );
+      window.open("https://www.youtube.com/watch?v=aQkPcPqTq4M");
+    }
+    // add submission code
+    const form = document.querySelector("#form");
+    const submitButton = document.querySelector("#submit");
+    const scriptURL =
+      "https://script.google.com/macros/s/1XTaVdkdAnzhAHoLOA-x0K4svtJOB9RUnp2OgudFCNoEE4Lo8muDKOgSO/exec";
+
+    form.addEventListener("submit", (e) => {
+      submitButton.disabled = true;
+      e.preventDefault();
+      let requestBody = new FormData(form);
+      fetch(scriptURL, { method: "POST", body: requestBody })
+        .then((response) => {
+          alert("Success!", response);
+          submitButton.disabled = false;
+        })
+        .catch((error) => {
+          alert("Error!", error.message);
+          submitButton.disabled = false;
+        });
+    });
+  </script>
 </html>
